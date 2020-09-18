@@ -13,7 +13,7 @@ const EditScreen = ({ navigation }) => {
     <BlogPostForm
       initialValues={{ ...blogPost }}
       onSubmit={(title, content) => {
-        editBlogPost(id, title, content, () => navigation.navigate("Index"));
+        editBlogPost(id, title, content, () => navigation.goBack());
       }}
     />
   );

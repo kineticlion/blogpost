@@ -11,12 +11,16 @@ const BlogPostForm = ({ onSubmit, initialValues }) => {
       <TextInput
         style={styles.input}
         value={title}
+        autoCorrect={false}
+        autoCompleteType='off'
         onChangeText={(text) => setTitle(text)}
       />
       <Text style={styles.label}>Enter Content:</Text>
       <TextInput
         style={styles.input}
         value={content}
+        autoCorrect={false}
+        autoCompleteType='off'
         onChangeText={(text) => setContent(text)}
       />
       <Button title='Save BlogPost' onPress={() => onSubmit(title, content)} />
